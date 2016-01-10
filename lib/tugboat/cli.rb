@@ -79,7 +79,7 @@ module Tugboat
       Middleware.sequence_list_droplets.call({
         "tugboat_action" => __method__,
         "user_quiet" => options[:quiet],
-        "include_urls" => options["include_urls"]
+        "include_urls" => !options["include_urls"]
         })
     end
 
